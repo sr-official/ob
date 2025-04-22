@@ -1,5 +1,6 @@
+/* common and reset code start */
 :root {
-  --primary: #A6183E;
+	--primary: #A6183E;
   --secondary: #FFBF86;
   --bg: #f9f9f9;
   --text: #333;
@@ -11,10 +12,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 16px;
 }
 
 body {
-  /* font-family: 'Inter', sans-serif; */
+	/* font-family: 'Inter', sans-serif; */
   color: var(--text);
   background-color: var(--bg);
   line-height: 1.6;
@@ -25,6 +33,7 @@ body {
   margin: auto;
   padding: 0 20px;
 }
+/* common and reset code end */
 
 /* HEADER */
 
@@ -172,9 +181,22 @@ h2 {
     text-align: center;
   }
 
-  .about-text h2 {
+  .about-section h2 {
     font-size: 2rem;
+		margin-left: 20px;
   }
+
+	.about-image{
+		order: 1;
+		flex: 1 1 100%;
+	}
+
+	.about-text{
+		order: 2;
+		margin-top: 0px;
+	}
+		
+	
 }
 
 /* About section end */
