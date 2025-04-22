@@ -78,9 +78,9 @@ body {
 .nav a::after {
   content: '';
   position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
+  left: 60%;
+  bottom: 5px;
+  transform: translateX(-60%);
   width: 0;
   height: 2px;
   background: var(--primary);
@@ -127,32 +127,86 @@ h2 {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
 .card {
   background: var(--card-bg);
   padding: 20px;
+	border: 5px solid transparent;
   border-radius: 12px;
   box-shadow: var(--card-shadow);
-  transition: transform 0.3s;
+  transition: all 0.5s;
+	position: relative;
 }
 
 .card:hover {
   transform: translateY(-5px);
+	border: 5px solid var(--secondary);
+}
+
+.card img {
+	width: 95%;
+	height: 95%;
+	object-fit: contain;
+	border-radius: 12px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.card-info{
+	background: #a6183e9e;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 7px;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s ease;
+	opacity: 0;
+}
+
+.card-info a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	padding: 10px 8px;
+	border: 1px solid white;
+	border-radius: 8px;
+}
+
+.card:hover .card-info{
+	opacity: 1;
 }
 
 .image-placeholder{
 	width: 100%;
 	height: 200px;
-	background: #ddd;
+	/* background: #ddd; */
 	border-radius: 12px;
 	margin-bottom: 15px;
 	position: relative;
+	overflow: hidden;
 }
 
-.image-placeholder::after{
+/* .image-placeholder img{
+	width: 95%;
+	height: 95%;
+	object-fit: contain;
+	object-position: center;
+	transition: all 0.3s ease;
+	cursor: pointer;
+} */
+
+
+/* .image-placeholder::after{
 	content: "Image";
 	position: absolute;
 	top: 50%;
@@ -163,7 +217,7 @@ h2 {
 	background: rgba(0, 0, 0, 0.279);
 	padding: 10px;
 	border-radius: 8px;
-}
+} */
 
 ul {
   list-style: none;
